@@ -1,0 +1,502 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Ensures consistent box model */
+}
+
+/* BODY */
+
+body {
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    background-color: grey;
+    flex-direction: column;
+}
+
+body.gallery { 
+    display: flex;
+    flex-direction: column;
+}
+
+#main-image-join{
+    width: 100%; /* Full width of the page or container */
+    height: 800px; /* Set the desired height for a wide effect */
+    overflow: hidden;
+}
+
+.featured-image-join{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.featured-image-join {
+    mask-image: 
+    linear-gradient(to top, rgba(0, 0, 0, 1) 90%, rgba(0, 0, 0, 0) 100%), /* Bottom fade */
+    linear-gradient(to bottom, rgba(0, 0, 0, 1) 90%, rgba(0, 0, 0, 0) 100%); /* Top fade */
+    /* For older browsers */
+    -webkit-mask-image: 
+        linear-gradient(to top, rgba(0, 0, 0, 1) 90%, rgba(0, 0, 0, 0) 100%),
+        linear-gradient(to bottom, rgba(0, 0, 0, 1) 80%, rgba(0, 0, 0, 0) 100%);
+    mask-composite: intersect;
+    -webkit-mask-composite: destination-in;
+}   
+
+
+body{
+    background-image: url('images/camo_bg.jpg'); /* Set your image as a background */
+    background-size: cover; /* Ensure the image covers the section */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-blend-mode: overlay;
+    height: 100%; /* Take the full viewport height */
+    position: relative;
+    background-color: #85715b;
+}
+
+body.join::before, body.gallery::before,
+body.about::before, body.donate::before, body.index::before {
+    content: '';
+    position: absolute;
+    top: -40px;
+    left: 0;
+    right: 0;
+    bottom: -40px;
+    background-image: inherit; /* Use the same background image */
+    background-size: inherit;
+    background-position: inherit;
+    background-blend-mode: overlay;
+    background-color: #8b8278;
+    filter: blur(0.3rem); /* Adjust blur value */
+    z-index: -1; /* Ensure the blur stays behind the content */
+}
+
+footer {
+    color: white;
+    text-align: center;
+    padding-top: 40px;
+    width: 100%;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensure wrapper takes up full height */
+}
+
+/* Apply box-sizing to ensure padding and border don't affect width */
+* {
+    box-sizing: border-box;
+}
+
+/* Navigation Styling */
+.nav-logo{
+    width: 94px;
+    height: 54px;
+    padding: 0 20px;
+}
+
+header {
+    padding: 10px;
+    font-family: 'MilitaryFont';
+    font-weight: 400;
+    margin: 0 auto;
+    top: 1%;         /* Aligns it to the top */
+}
+
+.nav-line{
+    height: 34px;
+    width: 1px;
+    margin: 10px 10px; /* Space around the line */
+    background-color: black;
+}
+
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li a {
+    color: black;
+    text-decoration: none;
+    font-size: 30px;
+    padding: 10px 20px;  /* Added padding to create consistent clickable areas */
+    display: inline-block;  /* Ensures each item is treated as a block with padding */
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Active Link Styling */
+nav ul li a.active {
+    color: black;
+    border: 5px solid black;
+    padding: 5px 15px;
+    border-radius: 100px;
+}
+
+
+main {
+    margin-top: 30px;
+    text-align: center;
+    flex: 1;
+}
+
+/* Button Styling */
+.discord-button {
+    margin-top: 30px;
+    display: inline-block;
+    padding: 10px 20px;
+    color: white;
+    background-color: #7289DA;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 18px;
+}
+
+.paypal-button {
+    display: inline-block;
+    padding: 10px 20px;
+    color: white;
+    background-color: #7289DA;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 18px;
+    margin-top: 30px;
+}
+
+.discord-button:hover {
+    background-color: #5b6eae;
+}
+
+#requirements {
+    text-align: center;  /* Center the text */
+    width: 30vw;
+    min-width: 200px;
+    margin: 0 auto;
+    color: white;
+}
+
+#discord {
+    color: white;
+    margin-top: 30px;
+}
+
+.join-container {
+    padding: 20px;
+    background-color: black;
+    width: 30vw;
+    min-width: 350px;
+    border: 2px white solid;
+    border-radius: 20px;
+    margin: 0 auto;
+    margin-top: 100px;
+}
+
+#requirements ul {
+    list-style-type: disc;
+    list-style-type: none;
+    color: white;
+    padding: 0;
+    color:white;
+    padding-left: 0; 
+    max-width: 500px;
+    margin: auto;
+}
+
+#requirements li {
+    margin: 10px 0;
+    align-items: center;
+}
+
+#requirements li::before {
+    content: '•'; /* Custom bullet */
+    color: white; /* Bullet color */
+    margin-right: 10px; /* Space between bullet and text */
+}
+
+/* Styling for the main image */
+#main-image {
+    text-align: center;
+    margin-top: 0cqmax;
+}
+
+.main-text, .join-text, .about-text, .donate-text {
+    color: black;
+}
+
+.donate-text {
+    width: 30vw;
+    min-width: 350px; 
+    line-height: 1.6; 
+    margin:0 auto;
+    margin-top: 100px;
+    background-color: black;
+    border: 2px white solid;
+    border-radius: 20px;
+    padding:20px;
+}
+
+.donate-text h1 {
+    margin-bottom: 15px; 
+}
+
+.join-text {
+    margin: auto;
+    margin-top: 100px;
+    max-width: 500px;
+
+}
+
+/* Gallery Styling */
+.gallery-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 columns */
+    gap: 10px;
+    padding: 20px;
+}
+
+.gallery-container .img-container {
+    width: 100%;           /* Full width of the grid cell */
+    height: 100%;        /* Fixed height for all image containers */
+    max-height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;     /* Hide overflow to maintain uniformity */
+}
+
+.gallery-container img {
+    width: 100%;      /* Ensure image does not exceed container width */
+    height: 100%; 
+    object-fit: cover;  /* Ensure image does not exceed container height */
+    display: block;        /* Removes bottom space under image */
+    margin: auto;          /* Center the image within the container */
+    border: 6px solid rgb(252, 207, 185); /* Border around the image */
+    border-radius: 5px;    /* Optional: rounded corners for the border */
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.avatar-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10vw;
+    padding-bottom: 10vh;
+}
+
+.item {
+    text-align: center;
+    color: white;
+    width: 250px;
+    height: 250px;
+    /* border: white 2px solid;
+    border-radius: 10%; */
+}
+
+.item img {
+    width: 250px;
+    height: 250px;
+    border: rgb(180, 3, 3) 5px solid;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto;
+    margin-top: 25px;
+}
+
+.item p {
+    margin-top: 10px;
+    padding-bottom: 10px;
+    font-size: 16px;
+}
+
+.avatars {
+    color: white;
+    margin-top: 5vh;
+}
+
+.avatars h1 {
+    font-size: 60px;
+}
+
+.item>p {
+    font-size: 20px;
+}
+
+
+.index_text {
+    font-family:'RobotoSlab';
+    font-weight: 400;
+    max-width: 1500px;
+    z-index: 1;
+    margin: 0 auto;
+    padding: 50px;
+    padding-top: 0;
+    width: 80%;
+    border-radius: 8px;
+    color: black;
+    background-color: rgba(186, 159, 128, 0.8); /* Black background with 60% transparency */
+    border-radius: 70px; /* Optional: Rounded corners for a modern look */
+}
+
+.index_text h1 {
+    font-family: 'MilitaryFont';
+}
+
+.index_text h1,
+.index_text h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.index_text h2 {
+    font-size: 40px;
+}
+
+.index_text h1 {
+    word-spacing: 10px;
+    font-size: 150px;
+    font-weight: 200;
+}
+
+.index_text h3 {
+    text-align: left;
+    font-size: 28px;
+    max-width: 1200px;
+    margin: 20px 0 10px;
+    margin: 20px auto;
+}
+
+.index_text p {
+    text-align: left;
+    line-height: 1.2;
+    max-width: 1200px;
+    margin: auto;
+    margin-bottom: 20px;
+    font-size: 25px;
+    text-align: justify;
+}
+
+.about-text {
+    width: 50vw;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 100px;
+}
+
+
+@font-face {
+    font-family: 'MilitaryFont';
+    src: url('ARMY_RUST.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'RobotoSlab';
+    src: url('RobotoSlab-VariableFont_wght.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.github{
+    color: white;
+}
+
+.featured-image {
+    max-width: 100%;
+    height: auto;
+    margin-top: 10px;
+}
+
+.featured-image {
+    width: 100%; /* Set the width as desired */
+    height: auto;
+    mask-image: 
+    linear-gradient(to top, rgba(0, 0, 0, 1) 80%, rgba(0, 0, 0, 0) 100%), /* Bottom fade */
+    linear-gradient(to bottom, rgba(0, 0, 0, 1) 80%, rgba(0, 0, 0, 0) 100%); /* Top fade */
+    /* For older browsers */
+    -webkit-mask-image: 
+        linear-gradient(to top, rgba(0, 0, 0, 1) 80%, rgba(0, 0, 0, 0) 100%),
+        linear-gradient(to bottom, rgba(0, 0, 0, 1) 80%, rgba(0, 0, 0, 0) 100%);
+    mask-composite: intersect;
+    -webkit-mask-composite: destination-in;
+}   
+
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    .gallery-container {
+        grid-template-columns: 1fr; /* Stack images in one column on smaller screens */
+    }
+
+    .index_text h1{
+        font-size: 80px;
+    }
+
+    .index_text h2{
+        font-size: 30px;
+    }
+
+    .index_text h3{
+        font-size: 25px;
+    }
+
+    .index_text p{
+        font-size: 20px;
+    }
+
+    nav ul li a {
+        color: black;
+        text-decoration: none;
+        font-size: 16px;
+        padding: 10px 5px;  /* Added padding to create consistent clickable areas */
+        display: inline-block;  /* Ensures each item is treated as a block with padding */
+    }
+    
+    nav ul li a:hover {
+        text-decoration: underline;
+    }
+    
+    /* Active Link Styling */
+    nav ul li a.active {
+        color: black;
+        border:none;
+        border-radius: 0;
+        border-bottom: 3px solid black;
+        border-top: 3px solid black;
+        padding: 8px 5px;
+    }
+
+    .nav-line{
+        height: 25px;
+        width: 1px;
+        margin: 5px 10px; /* Space around the line */
+    }
+
+    .nav-logo{
+        display:none;
+    }
+}
