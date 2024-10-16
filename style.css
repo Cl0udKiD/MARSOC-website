@@ -56,14 +56,18 @@ body{
     background-color: #85715b;
 }
 
+body.join, body.donate, body.about{
+    background-image: url("images/bg_test.jpg");
+}
+
 body.join::before, body.gallery::before,
 body.about::before, body.donate::before, body.index::before {
     content: '';
     position: absolute;
-    top: -40px;
+    top: 0;
     left: 0;
     right: 0;
-    bottom: -40px;
+    bottom: 0;
     background-image: inherit; /* Use the same background image */
     background-size: inherit;
     background-position: inherit;
@@ -74,10 +78,12 @@ body.about::before, body.donate::before, body.index::before {
 }
 
 footer {
-    color: white;
+    color: black;
     text-align: center;
     padding-top: 40px;
     width: 100%;
+    position: absolute;
+    bottom: 20px;
 }
 
 .wrapper {
@@ -156,14 +162,18 @@ main {
 
 /* Button Styling */
 .discord-button {
-    margin-top: 30px;
+    margin-top: 20px;
     display: inline-block;
-    padding: 10px 20px;
-    color: white;
-    background-color: #7289DA;
+    padding: 5px 30px;
+    color: black;
+    background-color: #ccc19a;
     text-decoration: none;
-    border-radius: 5px;
-    font-size: 18px;
+    border-radius: 200px;
+    border:5px solid black;
+    font-family: "MilitaryFont";
+    font-size: 80px;
+    line-height: 80px;
+    transition: 0.3s;
 }
 
 .paypal-button {
@@ -178,41 +188,63 @@ main {
 }
 
 .discord-button:hover {
-    background-color: #5b6eae;
+    background-color: black;
+    color: white;
+    border:5px solid white;
 }
 
 #requirements {
     text-align: center;  /* Center the text */
-    width: 30vw;
+    width: 100%;
     min-width: 200px;
+    font-family: "RobotoSlab";
+    font-size: 30px;
+    font-weight: 400;
     margin: 0 auto;
-    color: white;
+    color: black;
+}
+
+#requirements h2 {
+    font-family: "MilitaryFont";
+    font-weight: 100;
+    font-size: 80px;
+}
+
+#requirements h3 {
+    margin-top:40px;
 }
 
 #discord {
-    color: white;
+    color: black;
     margin-top: 30px;
+    font-family: "RobotoSlab";
+}
+
+#discord h2 {
+    font-size: 40px;
+}
+
+#discord p {
+    font-size: 25px;
 }
 
 .join-container {
-    padding: 20px;
-    background-color: black;
-    width: 30vw;
+    padding: 50px;
+    background-color: rgba(186, 159, 128, 0.8); /* Black background with 60% transparency */
+    max-width: 1000px;
+    width: 80%;
     min-width: 350px;
-    border: 2px white solid;
     border-radius: 20px;
     margin: 0 auto;
-    margin-top: 100px;
+    margin-top: 30px;
 }
 
 #requirements ul {
     list-style-type: disc;
     list-style-type: none;
-    color: white;
     padding: 0;
-    color:white;
     padding-left: 0; 
-    max-width: 500px;
+    max-width: 1200px;
     margin: auto;
 }
 
@@ -223,7 +255,6 @@ main {
 
 #requirements li::before {
     content: '•'; /* Custom bullet */
-    color: white; /* Bullet color */
     margin-right: 10px; /* Space between bullet and text */
 }
 
@@ -238,15 +269,14 @@ main {
 }
 
 .donate-text {
-    width: 30vw;
-    min-width: 350px; 
-    line-height: 1.6; 
-    margin:0 auto;
-    margin-top: 100px;
-    background-color: black;
-    border: 2px white solid;
+    padding: 50px;
+    background-color: rgba(186, 159, 128, 0.8); /* Black background with 60% transparency */
+    max-width: 1000px;
+    width: 80%;
+    min-width: 350px;
     border-radius: 20px;
-    padding:20px;
+    margin: 0 auto;
+    margin-top: 30px;
 }
 
 .donate-text h1 {
@@ -268,6 +298,7 @@ main {
     padding: 20px;
 }
 
+
 .gallery-container .img-container {
     width: 100%;           /* Full width of the grid cell */
     height: 100%;        /* Fixed height for all image containers */
@@ -279,6 +310,64 @@ main {
 }
 
 .gallery-container img {
+    width: 100%;      /* Ensure image does not exceed container width */
+    height: 100%; 
+    object-fit: cover;  /* Ensure image does not exceed container height */
+    display: block;        /* Removes bottom space under image */
+    margin: auto;          /* Center the image within the container */
+    border: 6px solid rgb(252, 207, 185); /* Border around the image */
+    border-radius: 5px;    /* Optional: rounded corners for the border */
+}
+
+.gallery-container-donate-2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 columns */
+    gap: 10px;
+    padding: 20px;
+}
+
+.gallery-container-donate-2 .img-container {
+    width: 100%;           /* Full width of the grid cell */
+    height: 100%;        /* Fixed height for all image containers */
+    max-height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;     /* Hide overflow to maintain uniformity */
+}
+
+.gallery-container-donate-2 img {
+    width: 100%;      /* Ensure image does not exceed container width */
+    height: 100%; 
+    object-fit: cover;  /* Ensure image does not exceed container height */
+    display: block;        /* Removes bottom space under image */
+    margin: auto;          /* Center the image within the container */
+    border: 6px solid rgb(252, 207, 185); /* Border around the image */
+    border-radius: 5px;    /* Optional: rounded corners for the border */
+}
+
+.gallery-container-donate-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 2 columns */
+    gap: 10px;
+    padding: 20px;
+}
+
+.donate-spacer{
+    height: 60px;
+}
+
+.gallery-container-donate-3 .img-container {
+    width: 100%;           /* Full width of the grid cell */
+    height: 100%;        /* Fixed height for all image containers */
+    max-height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;     /* Hide overflow to maintain uniformity */
+}
+
+.gallery-container-donate-3 img {
     width: 100%;      /* Ensure image does not exceed container width */
     height: 100%; 
     object-fit: cover;  /* Ensure image does not exceed container height */
@@ -352,6 +441,7 @@ body {
     max-width: 1500px;
     z-index: 1;
     margin: 0 auto;
+    margin-bottom: 60px;
     padding: 50px;
     padding-top: 0;
     width: 80%;
@@ -401,9 +491,28 @@ body {
 
 .about-text {
     width: 50vw;
+    font-family: "RobotoSlab";
     text-align: center;
     margin: 0 auto;
-    margin-top: 100px;
+    margin-top: 40px;
+    padding: 50px;
+    background-color: rgba(186, 159, 128, 0.8); /* Black background with 60% transparency */
+    max-width: 1000px;
+    width: 80%;
+    min-width: 350px;
+    border-radius: 20px;
+    margin: 0 auto;
+    margin-top: 30px;
+}
+
+.about-text h1 {
+    font-family: "MilitaryFont";
+    font-weight: 100;
+    font-size: 60px;
+}
+
+.about-text p{
+    font-size: 25px;
 }
 
 
@@ -422,7 +531,7 @@ body {
 }
 
 .github{
-    color: white;
+    color: black;
 }
 
 .featured-image {
@@ -445,10 +554,82 @@ body {
     -webkit-mask-composite: destination-in;
 }   
 
+.roster {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(186, 159, 128, 0.8); /* Black background with 60% transparency */
+    width: 80%;
+    max-width: 1500px;
+    margin: 30px auto;
+    border-radius: 20px;
+    padding: 30px;
+}
+
+.roster h1{
+    font-family: "MilitaryFont";
+    font-size: 80px;
+    font-weight: 100;
+}
+
+.roster-item{
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    border: 3px  black solid;
+    background-color: #ccc19a;
+}
+
+.roster-item img{
+    width: 15vh;
+    height: 20vh;
+    border-radius: 5px;
+}
+
+.roster-item h3{
+    width: 15vh;
+    height: 3vh;
+    font-size: 30px;
+}
+
+.master-gunnery{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.item-container{
+    gap: 40px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.rank{
+    margin-top: 40px;
+}
+
+.rank h2{
+    font-family: "MIlitaryFont";
+    font-size: 50px;
+    font-weight: 100;
+}
 
 /* Responsive adjustments */
 @media (max-width: 600px) {
     .gallery-container {
+        grid-template-columns: 1fr; /* Stack images in one column on smaller screens */
+    }
+
+    .gallery-container-donate-2 {
+        grid-template-columns: 1fr; /* Stack images in one column on smaller screens */
+    }
+
+    .gallery-container-donate-3 {
         grid-template-columns: 1fr; /* Stack images in one column on smaller screens */
     }
 
@@ -498,5 +679,21 @@ body {
 
     .nav-logo{
         display:none;
+    }
+
+    #requirements h2 {
+        font-size: 60px;
+    }
+    
+    #requirements h3 {
+        font-size: 50px;
+    }
+
+    #requirements li {
+        font-size: 25px;
+    }
+
+    #requirements p {
+        font-size: 25px;
     }
 }
