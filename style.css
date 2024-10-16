@@ -303,6 +303,7 @@ main {
     width: 100%;           /* Full width of the grid cell */
     height: 100%;        /* Fixed height for all image containers */
     max-height: 700px;
+    min-height: 200px;
     border-radius: 10px;
     border: #ccc19a 5px solid;
     display: flex;
@@ -493,7 +494,7 @@ main {
     width: 100%; /* Set the width as desired */
     height: auto;
     mask-image: 
-    linear-gradient(to top, rgba(0, 0, 0, 1) 80%, rgba(0, 0, 0, 0) 100%), /* Bottom fade */
+    linear-gradient(to top, rgba(0, 0, 0, 1) 800%, rgba(0, 0, 0, 0) 100%), /* Bottom fade */
     linear-gradient(to bottom, rgba(0, 0, 0, 1) 80%, rgba(0, 0, 0, 0) 100%); /* Top fade */
     /* For older browsers */
     -webkit-mask-image: 
