@@ -555,6 +555,14 @@ main {
     flex-wrap: wrap;
 }
 
+.item-container:last-child .roster-item:last-child{
+    margin-right: 0;
+}
+
+.item-container:last-child .roster-item:first-child{
+    margin-left: 0;
+}
+
 .rank{
     margin-top: 10px;
     width: 90%;
