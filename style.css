@@ -271,7 +271,7 @@ main {
 .donate-text {
     padding: 50px;
     background-color: rgba(186, 159, 128, 0.8); /* Black background with 60% transparency */
-    max-width: 1000px;
+    max-width: 600px;
     width: 80%;
     min-width: 350px;
     border-radius: 20px;
