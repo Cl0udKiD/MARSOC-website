@@ -302,7 +302,9 @@ main {
 .gallery-container .img-container {
     width: 100%;           /* Full width of the grid cell */
     height: 100%;        /* Fixed height for all image containers */
-    max-height: 50vh;
+    max-height: 700px;
+    border-radius: 10px;
+    border: #ccc19a 5px solid;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -315,7 +317,6 @@ main {
     object-fit: cover;  /* Ensure image does not exceed container height */
     display: block;        /* Removes bottom space under image */
     margin: auto;          /* Center the image within the container */
-    border: 6px solid rgb(252, 207, 185); /* Border around the image */
     border-radius: 5px;    /* Optional: rounded corners for the border */
 }
 
@@ -382,58 +383,6 @@ main {
     margin: 0;
     padding: 0;
 }
-
-body {
-    font-family: Arial, sans-serif;
-}
-
-.avatar-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 10vw;
-    padding-bottom: 10vh;
-}
-
-.item {
-    text-align: center;
-    color: white;
-    width: 250px;
-    height: 250px;
-    /* border: white 2px solid;
-    border-radius: 10%; */
-}
-
-.item img {
-    width: 250px;
-    height: 250px;
-    border: rgb(180, 3, 3) 5px solid;
-    border-radius: 50%;
-    object-fit: cover;
-    display: block;
-    margin: 0 auto;
-    margin-top: 25px;
-}
-
-.item p {
-    margin-top: 10px;
-    padding-bottom: 10px;
-    font-size: 16px;
-}
-
-.avatars {
-    color: white;
-    margin-top: 5vh;
-}
-
-.avatars h1 {
-    font-size: 60px;
-}
-
-.item>p {
-    font-size: 20px;
-}
-
 
 .index_text {
     font-family:'RobotoSlab';
