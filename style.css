@@ -510,8 +510,8 @@ main {
     flex-direction: column;
     align-items: center;
     background-color: rgba(186, 159, 128, 0.8); /* Black background with 60% transparency */
-    width: 80%;
-    max-width: 1000px;
+    width: 90%;
+    max-width: 1300px;
     margin: 30px auto;
     border-radius: 20px;
     padding: 30px;
@@ -527,15 +527,18 @@ main {
     margin: 0 auto;
     display: flex;
     flex-direction: column;
+    align-items: center;
+    margin: 0 10px;
+    margin-bottom: 20px;
     border-radius: 10px;
     border: 3px  black solid;
     background-color: #ccc19a;
 }
 
 .roster-item img{
-    width: 15vh;
+    width: 20vh;
     border-bottom: 3px black solid;
-    height: 20vh;
+    height: 30vh;
     border-radius: 5px;
 }
 
@@ -545,23 +548,24 @@ main {
     font-size: 30px;
 }
 
-.master-gunnery{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    gap: 40px;
-    flex-wrap: wrap;
-}
-
 .item-container{
-    gap: 40px;
     display: flex;
+    justify-content: space-evenly;
     flex-direction: row;
     flex-wrap: wrap;
 }
 
 .rank{
-    margin-top: 40px;
+    margin-top: 10px;
+    width: 90%;
+}
+
+.roster-line{
+    margin-top: 20px;
+    height: 5px;
+    width: 80%;
+    background-color: black;
+    border-radius: 5px;
 }
 
 .rank h2{
