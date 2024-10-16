@@ -561,7 +561,7 @@ body {
     align-items: center;
     background-color: rgba(186, 159, 128, 0.8); /* Black background with 60% transparency */
     width: 80%;
-    max-width: 1500px;
+    max-width: 1000px;
     margin: 30px auto;
     border-radius: 20px;
     padding: 30px;
@@ -584,6 +584,7 @@ body {
 
 .roster-item img{
     width: 15vh;
+    border-bottom: 3px black solid;
     height: 20vh;
     border-radius: 5px;
 }
